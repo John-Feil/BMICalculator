@@ -1,0 +1,88 @@
+<div class ='container'>
+<div class='row'>
+    <div class="col-md-6">
+        <div *ngIf="category == 0">
+            <br>
+            <h5>Please check the accuracy of the information you entered:</h5>
+            <br>
+            <p *ngIf="english == 0">Height: {{height}} cm</p>
+            <p *ngIf="english == 1">Height: {{feet}} feet and {{inches}} inches</p>
+            <br>
+            <p *ngIf="english == 0">Weight: {{weight}} kg</p>
+            <p *ngIf="english == 1">Weight: {{pounds}} lbs</p>
+        </div>
+        <div *ngIf="category == 1">
+            <h5>For the information you entered:</h5>
+            <br>
+            <p *ngIf="english == 0">Height: {{height}} cm</p>
+            <p *ngIf="english == 1">Height: {{feet}} feet and {{inches}} inches</p>
+            <br>
+            <p *ngIf="english == 0">Weight: {{weight}} kg</p>
+            <p *ngIf="english == 1">Weight: {{pounds}} lbs</p>
+            <br>
+            <p>Your BMI is {{bmi}}, indicating your weight is in the Underweight range.</p>
+        </div>
+        <div *ngIf="category == 2">
+            <h5>For the information you entered:</h5>
+            <br>
+            <p *ngIf="english == 0">Height: {{height}} cm</p>
+            <p *ngIf="english == 1">Height: {{feet}} feet and {{inches}} inches</p>
+            <br>
+            <p *ngIf="english == 0">Weight: {{weight}} kg</p>
+            <p *ngIf="english == 1">Weight: {{pounds}} lbs</p>
+            <br>
+            <p>Your BMI is {{bmi}}, indicating your weight is in the Normal range.</p>
+        </div>
+        <div *ngIf="category == 3">
+            <h5>For the information you entered:</h5>
+            <br>
+            <p *ngIf="english == 0">Height: {{height}} cm</p>
+            <p *ngIf="english == 1">Height: {{feet}} feet and {{inches}} inches</p>
+            <br>
+            <p *ngIf="english == 0">Weight: {{weight}} kg</p>
+            <p *ngIf="english == 1">Weight: {{pounds}} lbs</p>
+            <br>
+            <p>Your BMI is {{bmi}}, indicating your weight is in the Overweight range.</p>
+        </div>
+        <div *ngIf="category == 4">
+            <h5>For the information you entered:</h5>
+            <br>
+            <p *ngIf="english == 0">Height: {{height}} cm</p>
+            <p *ngIf="english == 1">Height: {{feet}} feet and {{inches}} inches</p>
+            <br>
+            <p *ngIf="english == 0">Weight: {{weight}} kg</p>
+            <p *ngIf="english == 1">Weight: {{pounds}} lbs</p>
+            <br>
+            <p>Your BMI is {{bmi}}, indicating your weight is in the Obese range.</p>
+        </div>
+    </div>
+        <div class="col-md-3">
+            <br>
+            <table class ='table table-bordered'>
+                <tbody>
+                    <tr>
+                        <th scope="col">BMI</th>
+                        <th scope="col">Weight Status</th>
+                    </tr>
+                    <tr [ngClass]="{'featured' : featured == 1}">
+                        <td>Below 18.5</td>
+                        <td>Underweight</td>
+                    </tr>
+                    <tr [ngClass]="{'featured' : featured == 2}">
+                        <td>18.5-24.9</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr [ngClass]="{'featured' : featured == 3}">
+                        <td>25.0-29.9</td>
+                        <td>Overweight</td>
+                    </tr>
+                    <tr [ngClass]="{'featured' : featured == 4}">
+                        <td>30.0 and Above</td>
+                        <td>Obese</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+</div>
+

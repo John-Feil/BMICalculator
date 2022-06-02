@@ -1,0 +1,50 @@
+<div class ='container'>
+    <div class='row'>
+        <div class="col-md-4">
+          <h3>1. Height:</h3>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <label for="">Feet</label>
+        </div>
+        <div class="col-md-4">
+          <label for="">Inches</label>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <input type="number" [(ngModel)]='feet'>
+        </div>
+        <div class="col-md-4">
+          <input type="number" [(ngModel)]='inches'>
+        </div>
+      </div>
+      <br>
+      <div class='row'>
+        <div class="col-md-4">
+          <h3>2. Weight:</h3>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <label for="">Pounds</label>
+        </div>
+      </div>
+      <div class='row'>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <input type="number" [(ngModel)]='pounds'>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <button routerLink='calculation' routerLinkActive="active" type="button" class="btn btn-primary" (click)='calculate()'>Calculate</button>
+        </div>
+      </div>
+    </div>
